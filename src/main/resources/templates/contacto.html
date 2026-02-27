@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{general/fragmentos :: head}"></
+    <body>
+        <header th:replace="~{general/fragmentos :: header}"></header>
+        <div class="container mt-4">
+            <div class="card">
+                <div class="card-header">
+                    <h4>[[#{contacto.titulo}]]</h4>
+                </div>
+                <div class="card-body">
+                    <form class="was-validated">
+                        <div class="mb-3">
+                            <label class="form-label">[[#{contacto.nombre}]]</label>
+                            <input type="text" class="form-control" required="true"/>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">[[#{contacto.correo}]]</label>
+                            <input type="email" class="form-control" required="true"/>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">[[#{contacto.mensaje}]]</label>
+                            <textarea class="form-control" rows="4" required="true"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fa-solid fa-paper-plane"></i> [[#{contacto.enviar}]]
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+<!-- FOOTER -->
+<footer xmlns:th="http://www.thymeleaf.org" th:fragment="footer"
+        class="p-3 mt-5 bg-info text-white text-center">
+    [[#{plantilla.derechos}]] &COPY;
+</footer>
